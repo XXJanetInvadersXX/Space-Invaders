@@ -15,6 +15,7 @@ turtle.screensize(1920, 1080)
 wn.bgpic("background.gif")
 
 turtle.register_shape("KUK.gif")
+turtle.register_shape("BÖGHORAN.gif")
 
 # Draw border
 border_pen = turtle.Turtle()
@@ -68,7 +69,7 @@ for i in range(Number_of_enemies):
 
 for enemy in enemies:
     enemy.color("red")
-    enemy.shape("circle")
+    enemy.shape("BÖGHORAN.gif")
     enemy.penup()
     enemy.speed(0)
     x = random.randint(-200, 200)
