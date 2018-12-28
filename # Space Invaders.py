@@ -11,7 +11,7 @@ from PIL import Image
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.title("Space Invaders")
-turtle.screensize(1920, 1080)
+turtle.screensize(1280, 720)
 wn.bgpic("background.gif")
 
 turtle.register_shape("KUK.gif")
