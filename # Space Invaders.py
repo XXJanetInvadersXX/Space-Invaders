@@ -55,7 +55,7 @@ score_pen.hideturtle()
 # Create the player turtle
 player = turtle.Turtle()
 player.color("blue")
-player.shape("triangle")
+player.shape(playerImage)
 player.penup()
 player.speed(0)
 player.setposition(0, -250)
@@ -75,7 +75,7 @@ for i in range(Number_of_enemies):
 
 for enemy in enemies:
     enemy.color("red")
-    enemy.shape("circle")
+    enemy.shape(enemyImage)
     enemy.penup()
     enemy.speed(0)
     x = random.randint(-200, 200)
