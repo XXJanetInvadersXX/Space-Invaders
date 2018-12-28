@@ -12,7 +12,7 @@ wn = turtle.Screen()
 wn.bgcolor("black")
 wn.title("Space Invaders")
 turtle.screensize(1920, 1080)
-wn.bgpic("background.png")
+wn.bgpic("background.gif")
 
 turtle.register_shape("KUK.gif")
 
