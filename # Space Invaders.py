@@ -6,16 +6,22 @@ import math
 import random
 from PIL import Image
 
+# Images
+backgroundImage = "background.gif"
+bulletImage = "bullet.gif"
+playerImage = "player.gif"
+enemyImage = "enemy.gif"
 
 # Set up the screen
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.title("Space Invaders")
 turtle.screensize(1280, 720)
-wn.bgpic("background.gif")
+wn.bgpic(backgroundImage)
 
-turtle.register_shape("KUK.gif")
-turtle.register_shape("BÖGHORAN.gif")
+turtle.register_shape(bulletImage)
+turtle.register_shape(playerImage)
+turtle.register_shape(enemyImage)
 
 # Draw border
 border_pen = turtle.Turtle()
@@ -58,7 +64,7 @@ player.setheading(90)
 # Player Movement
 playerspeed = 15
 
-# Enemies (Basic)
+# Number of enemies
 Number_of_enemies = 5
 # Lists
 enemies = []
@@ -67,34 +73,14 @@ enemies = []
 for i in range(Number_of_enemies):
     enemies.append(turtle.Turtle())
 
-
-# Lists
-enemies = []
-
-# add enimies to lists
-for i in range(Number_of_enemies):
-    enemies.append(turtle.Turtle())
-
-Number_of_enemies = 3
-
 for enemy in enemies:
     enemy.color("red")
-    enemy.shape("triangle")
+    enemy.shape("circle")
     enemy.penup()
     enemy.speed(0)
     x = random.randint(-200, 200)
     y = random.randint(100, 250)
     enemy.setposition(x, y)
-
-for enemy in enemies:
-    enemy.color("red")
-    enemy.shape("BÖGHORAN.gif")
-    enemy.penup()
-    enemy.speed(0)
-    x = random.randint(-200, 200)
-    y = random.randint(100, 250)
-    enemy.setposition(x, y)
-
 
 enemyspeed = 2
 
@@ -104,7 +90,7 @@ bullet = turtle.Turtle()
 bullet.penup()
 bullet.goto(0, 1000)
 bullet.color("yellow")
-bullet.shape("KUK.gif")
+bullet.shape(bulletImage)
 bullet.speed(0)
 bullet.setheading(90)
 bullet.shapesize(0.5, 0.5)
