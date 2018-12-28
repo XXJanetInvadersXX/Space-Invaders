@@ -58,7 +58,7 @@ player.setheading(90)
 # Player Movement
 playerspeed = 15
 
-# Number of enemies
+# Enemies (Basic)
 Number_of_enemies = 5
 # Lists
 enemies = []
@@ -66,6 +66,25 @@ enemies = []
 # add enimies to lists
 for i in range(Number_of_enemies):
     enemies.append(turtle.Turtle())
+
+
+# Lists
+enemies = []
+
+# add enimies to lists
+for i in range(Number_of_enemies):
+    enemies.append(turtle.Turtle())
+
+Number_of_enemies = 3
+
+for enemy in enemies:
+    enemy.color("red")
+    enemy.shape("triangle")
+    enemy.penup()
+    enemy.speed(0)
+    x = random.randint(-200, 200)
+    y = random.randint(100, 250)
+    enemy.setposition(x, y)
 
 for enemy in enemies:
     enemy.color("red")
@@ -75,6 +94,7 @@ for enemy in enemies:
     x = random.randint(-200, 200)
     y = random.randint(100, 250)
     enemy.setposition(x, y)
+
 
 enemyspeed = 2
 
