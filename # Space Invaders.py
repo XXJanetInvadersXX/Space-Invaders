@@ -20,6 +20,8 @@ turtle.screensize(1280, 720)
 wn.bgpic(backgroundImage)
 
 turtle.register_shape(bulletImage)
+turtle.register_shape(playerImage)
+turtle.register_shape(enemyImage)
 
 # Draw border
 border_pen = turtle.Turtle()
