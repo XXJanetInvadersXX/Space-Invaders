@@ -6,15 +6,20 @@ import math
 import random
 from PIL import Image
 
+# Images
+backgroundImage = "background.gif"
+bulletImage = "bullet.gif"
+playerImage = "player.gif"
+enemyImage = "enemy.gif"
 
 # Set up the screen
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.title("Space Invaders")
-turtle.screensize(1920, 1080)
-wn.bgpic("background.gif")
+turtle.screensize(1280, 720)
+wn.bgpic(backgroundImage)
 
-turtle.register_shape("KUK.gif")
+turtle.register_shape(bulletImage)
 
 # Draw border
 border_pen = turtle.Turtle()
@@ -83,7 +88,7 @@ bullet = turtle.Turtle()
 bullet.penup()
 bullet.goto(0, 1000)
 bullet.color("yellow")
-bullet.shape("KUK.gif")
+bullet.shape(bulletImage)
 bullet.speed(0)
 bullet.setheading(90)
 bullet.shapesize(0.5, 0.5)
